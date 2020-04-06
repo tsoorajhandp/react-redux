@@ -1,14 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-class Login extends React.Component {
+class Dashboard extends React.Component {
     render() {
         console.log(this.props);
         const { Props } = this.props;
         console.log(this.props.posts.length);
         return ( <
-            div >
-            Sooraj <
+            div className = "h-full py-4" > Dashboard { this.props.posts } <
             /div>
         );
     }
@@ -21,4 +20,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps)(Dashboard)
